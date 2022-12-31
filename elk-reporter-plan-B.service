@@ -1,0 +1,13 @@
+[Unit]
+Description=ELK Reporter
+After=multi-user.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/opt/elk-reporter
+ExecStart=/root/.pyenv/versions/elk-reporter-venv/bin/python /opt/elk-reporter/main.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

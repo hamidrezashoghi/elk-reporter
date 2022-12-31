@@ -1,0 +1,139 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <title>ELK Reporter</title>
+        <link href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' rel='stylesheet'>
+        <link href='#' rel='stylesheet'>
+        <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+        <style>::-webkit-scrollbar {
+          width: 8px;
+        }
+        /* Track */
+        ::-webkit-scrollbar-track {
+          background: #f1f1f1;
+        }
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+          background: #888;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+          background: #555;
+        } body {
+            font-family: 'Lato', sans-serif;
+        }
+
+        h1 {
+            margin-bottom: 40px;
+        }
+
+        label {
+            color: #333;
+        }
+
+        .btn-send {
+            font-weight: 300;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            width: 80%;
+            margin-left: 3px;
+            }
+            .help-block.with-errors {
+            color: #ff5050;
+            margin-top: 5px;
+
+        }
+
+        .card{
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        </style>
+    </head>
+
+    <body className='snippet-body'>
+    <div class="container">
+    <div class=" text-center mt-5 ">
+        <h1 >ELK Reporter</h1>
+    </div>
+    <div class="row ">
+      <div class="col-lg-7 mx-auto">
+        <div class="card mt-2 mx-auto p-4 bg-light">
+            <div class="card-body bg-light">
+                <div class = "container">
+                    <form id="contact-form" role="form" action="/download" method="POST" enctype="multipart/form-data">
+                        <div class="controls">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="form_index_name">IndexName *</label>
+                                        <input id="form_index_name" type="text" name="index_name" class="form-control" placeholder="espresso-lumen-*" required="required" data-error="IndexName is required.">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="form_query">Query</label>
+                                        <input id="form_query" type="text" name="query" class="form-control" placeholder="geo (can be empty)">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="form_start_date">StartingDate *</label>
+                                        <input id="form_start_date" type="text" name="starting_date" class="form-control" placeholder="2022-11-08 08:08:08" required="required" data-error="StartingDate is required.">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="form_end_date">EndingDate *</label>
+                                        <input id="form_end_date" type="text" name="ending_date" class="form-control" placeholder="2022-11-08 10:10:10" required="required" data-error="EndingDate is required.">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="form_csv_seperator">CSVSeperator</label>
+                                        <input id="form_csv_seperator" type="text" name="csv_seperator" class="form-control" placeholder=", or |">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="form_fields">Fields *</label>
+                                        <textarea id="form_fields" name="fields" class="form-control" placeholder="using comma as seperator. for example in espresso-lumen-* index. beat.name,beat.hostname,message,datetime.date"
+                                                  rows="2" required="required" data-error="Please, write fields."></textarea>
+                                    </div>
+                                </div>
+                                    <div class="col-md-12">
+                                        <input type="submit" class="btn btn-success btn-send  pt-2 btn-block" value="Submit" >
+                                    </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- /.8 -->
+    </div>
+    <!-- /.row-->
+
+    </div>
+</div>
+        <script type='text/javascript' src='https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js'></script>
+        <script type='text/javascript' src='#'></script>
+        <script type='text/javascript' src='#'></script>
+        <script type='text/javascript' src='#'></script>
+        <script type='text/javascript'>#</script>
+        <script type='text/javascript'>var myLink = document.querySelector('a[href="#"]');
+        myLink.addEventListener('click', function(e) {
+          e.preventDefault();
+        });</script>
+    </body>
+</html>
