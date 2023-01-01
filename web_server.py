@@ -69,7 +69,7 @@ class WebServer:
                 return f"fields value has incorrect format. {fields}"
             else:
                 fields = fields.strip().split(',')
-            fields.append('empty')
+            fields.append('empty') # adding this field cause csv file had correct columns
 
             print(index_name, query, starting_date_millisec, ending_date_millisec, csv_seperator, fields)
             fp_name = datetime.utcnow().strftime('%Y%m%d%H%M%S')
